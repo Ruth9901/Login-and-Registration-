@@ -27,6 +27,7 @@ std::vector<std::string> parseCommaDelimitedString(std::string line)
 {
 	std::vector<std::string> result;
 	std::stringstream s_stream(line);
+	
 	//Iteration continues through our line string stream till we reach the
 	//delimiter ','. The substring is pushed back into our result vector array.
 	while(s_stream.good())
@@ -72,6 +73,7 @@ void __fastcall TmyLoginForm::loginButtonClick(TObject *Sender)
 
 						AnsiString editPassword = passwordEdit->Text;
 						const char* passwordString = editPassword.c_str();
+					
 						//Comparing the strings and if found same, then
 						//comparing passwords
 						if(std::strcmp(password,passwordString)==0)
@@ -84,9 +86,6 @@ void __fastcall TmyLoginForm::loginButtonClick(TObject *Sender)
 						}
 				}
 			}
-
-
-
 		}
 }
 //---------------------------------------------------------------------------
